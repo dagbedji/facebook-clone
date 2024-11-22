@@ -45,8 +45,9 @@ A clone of the Facebook website built for educational purposes. This project dem
 - Visit the login page and create a new account or log in with an existing account.
 
 ### Screenshots
-![Login Page](screenshots/login.png)
-![News Feed](screenshots/feed.png)
+![News Feed](screenshots/login.png)
+[News Feed](screenshots/premierepage.png)
+![News Feed](screenshots/troisieme.png)
 
 ## License
 MIT License
