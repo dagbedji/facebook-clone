@@ -1,0 +1,506 @@
+<%- include("partials/header.ejs") %>
+<body>
+
+    <!---------------------------main--------------------------->
+    <div class="main">
+
+
+    <!-----------------------------left------------------------->   
+    <div class="left">
+        
+        <div class="img">
+            <img src="./photo/profil.JPG" alt="profil">
+            <p> John Deo</p>
+        </div>
+
+        <div class="img">
+            <img src="./photo/friend.png" alt="profil" width="50px" >
+            <p> Friend</p>
+        </div>
+
+        <div class="img">
+            <img src="./photo/saved.png" alt="profil" width="50px"  >
+            <p> Saved</p>
+        </div>
+
+        <div class="img">
+            <img src="./photo/groups.png" alt="profil" width="50px" >
+            <p> Groups</p>
+        </div>
+
+        <div class="img">
+            <img src="./photo/market.png" alt="profil" width="50px" >
+            <p> Marketplace</p>
+        </div>
+
+        <div class="img">
+            <img src="./photo/watch.png" alt="profil" width="50px" >
+            <p> Watch</p>
+        </div>
+        <div class="img">
+            <img src="./photo/chevron.png" alt="profil" width="50px"  >
+            <p>See More</p>
+        </div>
+        <hr>
+
+        <h2>Your Shurtcuts</h2>
+        <p class="edit">Edit</p>
+
+
+        <div class="shortcuts">
+            <img src="./photo/shortcuts/Game.png.webp" alt="">
+            <p>MOBILE GAMES</p>
+        </div>
+
+        <div class="shortcuts">
+            <img src="./photo/shortcuts/education.jpg.webp" alt="">
+            <p>Online Education</p>
+        </div>
+
+        <div class="shortcuts">
+            <img src="./photo/shortcuts/foodlover.jpg.webp" alt="">
+            <p>Food Lover</p>
+        </div>
+
+        <div class="shortcuts">
+            <img src="./photo/socialmedia.png" alt="">
+            <p>Social Media Academy</p>
+        </div>
+
+        <div class="shortcuts">
+            <img src="./photo/shortcuts/pcshop.webp" alt="">
+            <p>PC Shop</p>
+        </div>
+
+        <div class="shortcuts">
+            <img src="./photo/chevron.png" alt="">
+            <p>See More</p>
+        </div>
+    </div> 
+
+
+    <!-----------------------------center------------------------->  
+
+
+    <div class="center">
+        <div class="top_box">
+
+            <div class="my_story_card">
+
+                <img src="./photo/profil.JPG" >
+
+                <div class="story_upload">
+                    <img src="./photo/plus-icon-png-20.jpg.png" >
+                    <p class="story_tag">Create story</p>
+                </div>
+
+
+            </div>
+
+            <div class="story_card">
+
+                <img src="./photo/plage.jpeg" alt="">
+
+                <div class="story_profil">
+
+                    <img src="./photo/storyprofil.JPG" alt="">
+                    <div class="circle"></div>
+                </div>
+                <div class="story_name">
+                    <p class="name">Aicha D</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="story_card">
+
+                <img src="./photo/safari.jpeg" alt="">
+
+                <div class="story_profil">
+
+                    <img src="./photo/jeunefille.jpg" alt="">
+                    <div class="circle"></div>
+                </div>
+                <div class="story_name">
+                    <p class="name">Judith Tremblay</p>
+                </div>
+
+            </div>
+
+
+            <div class="story_card">
+
+                <img src="./photo/newyork.webp" alt="">
+
+                <div class="story_profil">
+
+                    <img src="./photo/istockphoto-1644238002-612x612.jpg" alt="">
+                    <div class="circle"></div>
+                </div>
+                <div class="story_name">
+                    <p class="name">Boris Lerichard</p>
+                </div>
+
+            </div>
+
+
+            <div class="story_card">
+
+                <img src="./photo/paysage-urbain-de-paris-vue-aérienne-à-travers-la-fenêtre-d-avion-tout-en-s-approchant-l-aéroport-196805149.jpg.webp" alt="">
+
+                <div class="story_profil">
+
+                    <img src="./photo/femmepro.jpeg" alt="">
+                    <div class="circle"></div>
+                </div>
+                <div class="story_name">
+                    <p class="name">Myriam De Souza</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="room">
+
+            <div class="room_image">
+                <img src="./photo/livevideo.png" >
+                <p class="room_tag">Create room</p>
+            </div>
+
+            <div class="room_profile">
+                <img src="./photo/profiles/profil1.webp" alt="">
+                <img src="./photo/profiles/profil2.jpg" alt="">
+                <img src="./photo/profiles/profil3.jpg.avif" alt="">
+                <img src="./photo/profiles/profil4.jpg" alt="">
+                <img src="./photo/profiles/profil5.jpg" alt="">
+                <img src="./photo/profiles/profil6.jpeg" alt="">
+                <img src="./photo/femmepro.jpeg" alt="">
+                <img src="./photo/jeunefille.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="my_post">
+              
+            <div class="post_top">  
+                <form action="/submit" method="POST">
+                    <img src="./photo/profil.JPG" > 
+                    <input type="text" name="post" placeholder="What's on your mind, John?" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <hr>
+            <div class="post_bottom">
+                <div class="post_icon">
+                    <i class="fa-solid fa-video red"></i>
+                    <p>Live Video</p>
+                </div>
+    
+              <!-- Container div for the upload form and icon -->
+    <div class="post_icon">
+    <!-- Form for uploading an image, using POST method and multipart/form-data encoding -->
+    <form action="/upload" method="POST" enctype="multipart/form-data" id="uploadForm">
+      <!-- Label associated with the file input, styled as an image icon and caption -->
+      <label for="file">
+        <!-- Font Awesome icon for images, styled with a green color -->
+        <i class="fa-solid fa-images green"></i>
+        <!-- Text indicating the purpose of the input (Photo/Video) -->
+        <p>Photo/Video</p>
+      </label>
+      <!-- Hidden file input for selecting an image, linked to the label above -->
+       <input type="file" name="image" id="file" accept="image/*" hidden>
+    </form>
+  </div>
+  
+  <script>
+    // Get the file input element by its ID
+    const fileInput = document.getElementById('file');
+    // Get the form element by its ID
+    const uploadForm = document.getElementById('uploadForm');
+  
+    // Add an event listener to the file input that triggers when its value changes
+    fileInput.addEventListener('change', function() {
+      // Check if at least one file has been selected
+      if (fileInput.files.length > 0) {
+        // Submit the form automatically when a file is selected
+        uploadForm.submit();
+      }
+    });
+  </script>
+  
+                  
+                  
+    
+                <div class="post_icon">
+                    <i class="fa-solid fa-face-grin yellow"></i>
+                    <p>Feeling/activity</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="friends_posts">
+            
+            <% if (posts.length > 0) { %>
+                <% posts.forEach(function(post, indexdel) { %>
+                    <div class="friends_post">
+                        <div class="friends_post_top">
+                            <div class="img_and_name">
+                                <img src="./photo/profil.JPG" alt="">
+                                <div class="friends_name">
+                                    <p class="friends_name">Karels Dagbedji</p>
+                                    <p class="time">Just now <i class="fa-solid fa-user-group"></i></p>
+                                </div>
+                            </div> 
+                            <div class="menu">
+                                <form action="/update" method="POST">
+                                    <label for="edit-select">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <select name="edit" id="edit-select" data-index="<%= indexdel %>" onchange="handleSelectChange(this)">
+                                            <option value="selection">Action</option>
+                                            <option value="edit" > Edit</option>
+                                            <option value= "delete">Delete</option>
+                                        </select>
+                                    </label>
+                                    <input type="hidden" name="itemId" value="<%= indexdel %>">
+                                    <input type="hidden" name="updatedContent" id="updatedContent-<%= indexdel %>">
+                                    
+                                </form>
+                            </div>
+                              
+                            </div> 
+                                          
+
+                        <% if (post.type === 'text') { %>
+                            <p class="post_content" id="postContent-<%= indexdel %>"><%= post.content %></p>
+                        <% } else if (post.type === 'image') { %>
+                            <img src="<%= post.content %>" alt="Uploaded Image" style="max-width: 400px;">
+                        <% } %>                        
+                        <!-- Post content -->
+        
+                        <div class="info">
+                            <div class="emoji_img">
+                                <img src="./photo/facebook-reactions.png">
+                                <p>25K others liked this</p>
+                            </div>
+                            <div class="comment">
+                                <p>421 Comments</p>
+                                <p>1.3K Shares</p>
+                            </div>
+                        </div>
+        
+                        <hr>
+        
+                        <div class="like">
+                            <div class="like_icon">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                <p>Like</p>
+                            </div>
+                            <div class="like_icon">
+                                <i class="fa-solid fa-message"></i>
+                                <p>Comment</p>
+                            </div>
+                            <div class="like_icon">
+                                <i class="fa-solid fa-share"></i>
+                                <p>Share</p>
+                            </div>
+                        </div>
+        
+                        <hr>
+        
+                        <div class="comment_warpper">
+                            <img src="./photo/profil.JPG">
+                            <div class="comment_search">
+                                <input type="text" placeholder="Write a comment">
+                                <i class="fa-regular fa-face-smile"></i>
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>No posts yet. Be the first to post something!</p>
+            <% } %>
+            <hr>
+
+     <div class="load">
+        <button>Load More</button>
+     </div>
+
+     <p class="end"> Design By<span><i class="fa-solid fa-face-grin-wide"></i>
+    KA Book Inc</span> <i class="fa-regular fa-copyright"></i> 200X</p>
+
+        
+    </div>
+    </div>
+
+
+
+
+    <!-----------------------------right------------------------->  
+
+    <div class="right">
+        <div class="first_warpper">
+            <div class="page">
+                <h2>Your Pages and profiles</h2>
+
+                <div class="menu">
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </div>
+                
+            </div>
+            <div class="page_img">
+                <img src="./photo/tete-de-mort-pirate-scaled.jpg">
+                <p>Web Designer</p>
+            </div>
+
+            <div class="page_icon">
+                <i class="fa-regular fa-bell"></i>
+                <p>20 Notifications</p>
+            </div>
+
+            <div class="page_icon">
+                <i class="fa-solid fa-bullhorn"></i>
+                <p>Create promotion</p>
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="second_warpper">
+            <h2>Birthdays</h2>
+            <div class="img_and_tag">
+
+                <img src="./photo/birthday.png" >
+                <p><span>Chimoah Tristan </span>and<span> 2 others </span>have birthdays today</p>
+            </div>
+        </div>
+
+        <div class="third_warpper">
+
+            <div class="contact_tag">
+                <h2>Contacts</h2>
+
+                <div class="contact_icon">
+                    <i class="fa-solid fa-video"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </div>
+            </div>
+
+            <div class="contact">
+                <img src="./photo/jeunefille.jpg" alt="">
+                <div class="circle"></div>
+                <p>Senuda De  Silva</p>
+            </div>
+
+            <div class="contact">
+                <img src="./photo/profiles/profil1.webp" alt="">
+                <p>Michel Tremblay</p>
+            </div>
+
+            <div class="contact">
+                <img src="./photo/profiles/profil2.jpg" alt="">
+                <div class="circle"></div>
+                <p>Ismelda Josée</p>
+            </div>
+            
+            <div class="contact">
+                <img src="./photo/profiles/profil3.jpg.avif" alt="">
+                <p>Chirelle Amoussou</p>
+            </div>
+
+            <div class="contact">
+                <img src="./photo/profiles/profil5.jpg" alt="">
+                <div class="circle"></div>
+                <p>Mike Combs</p>
+            </div>
+
+            <div class="contact">
+                <img src="./photo/profiles/profil6.jpeg" alt="">
+                <div class="circle"></div>
+                <p>Christophe Brown</p>
+                
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", function() {
+
+    // Select all elements with the class 'fa-solid fa-ellipsis'
+    var ellipsisIcons = document.querySelectorAll(".fa-solid.fa-ellipsis");// return static Nodelist
+    console.log("this is first ellipsisIcons:", ellipsisIcons)
+
+    // Add click event listeners to each ellipsis icon
+    ellipsisIcons.forEach(function(icon) { 
+        console.log("this is for each icon",icon); 
+        icon.addEventListener("click", function() { 
+            
+            console.log("Clicked icon:", icon);
+            // Find the nearest <select> element in the parent container
+            var selectMenu = this.parentElement.querySelector("select"); // Attempt to find a <select> element in the parent container
+            console.log("this selected:", selectMenu);
+            
+            // Toggle visibility
+            if (selectMenu.style.display === "none" || selectMenu.style.display === "") { // Only if <select> exists
+                // Toggle visibility of the dropdown menu
+                selectMenu.style.display = "block"; // Show the dropdown
+            } else {
+                selectMenu.style.display = "none"; // Hide the dropdown
+            }
+        });
+    });
+
+    // Find the select menu in the same container as the icon
+     // Select all ellipsis icons
+    // Add a click event listener to each icon
+    // Add event listener for all select menus
+    var selectMenus = document.querySelectorAll("select[name='edit']");
+    console.log("this is selectMenus:", selectMenus);
+    selectMenus.forEach(function(menu) {
+        console.log("this is menu:", menu);
+        menu.addEventListener("change", function() {
+            console.log("this is menu after change:", menu);
+            this.style.display = "none"; // Hide the menu after selection
+        });
+    });
+});
+
+</script>
+
+<script>
+    function handleSelectChange(selectElement) {
+    const selectedValue = selectElement.value;
+    const postIndex = selectElement.closest('form').querySelector('input[name="itemId"]').value;
+
+    if (selectedValue === 'edit') {
+        const newContent = window.prompt("Enter new content for this post:");
+        if (newContent) {
+            const updatedContentField = document.getElementById(`updatedContent-${postIndex}`);
+            updatedContentField.value = newContent;
+            selectElement.closest('form').setAttribute("action", "/update");
+            selectElement.closest('form').submit();
+        } else {
+            selectElement.selectedIndex = 0;
+        }
+    } else if (selectedValue === 'delete') {
+        const confirmDelete = window.confirm("Are you sure you want to delete this item?");
+        if (confirmDelete) {
+            selectElement.closest('form').setAttribute("action", "/delete");
+            selectElement.closest('form').submit();
+        } else {
+            selectElement.selectedIndex = 0;
+        }
+    }
+}
+</script>
+</body>
